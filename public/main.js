@@ -16,7 +16,11 @@ $(document).on('ready', function() {
 		var price = $(this).parent().find('#price').text()
 		var data = {item: item, price:price}
 		$.post( "/api/save", data, function( data ) {
-		  console.log('success')
+		  if (data === 'success') {
+		  	alert('Saved!')
+		  }else{
+		  	alert('FAILED TO SAVE!!')
+		  }
 		});
 	});
 

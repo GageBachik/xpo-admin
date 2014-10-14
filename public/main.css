@@ -1,5 +1,10 @@
+h5{
+    padding-left: 13px; 
+}
 #item{
     line-height: 32px;
+    width: 600px;
+    text-align: right;
 }
 #item p{
     float: left;
@@ -7,6 +12,5 @@
     vertical-align: middle;
 }
 #item button{
-    margin: 0 20px;
     vertical-align: middle;
 }
