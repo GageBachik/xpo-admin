@@ -1,4 +1,10 @@
 $(document).on('ready', function() {
+	$('#entered').on("keypress", function(e) {
+        if (e.keyCode == 13) {
+            $('#pass').click()
+        }
+	});
+
 	$('#pass').on('click', function(e){
 		e.preventDefault();
 		var pass = $('#entered').val();
@@ -23,5 +29,4 @@ $(document).on('ready', function() {
 		  }
 		});
 	});
-
 });
