@@ -1,0 +1,12 @@
+#item{
+    line-height: 32px;
+}
+#item p{
+    float: left;
+    margin: 0 20px;
+    vertical-align: middle;
+}
+#item button{
+    margin: 0 20px;
+    vertical-align: middle;
+}

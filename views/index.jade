@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1 Welcome Admin!
+	//- ul
+	//- 	li
+	//- 		a(href='#') Add Item
+
+	- each item in items
+		#item 
+			p Name: 
+				span#name #{item.item}
+			p Price: $
+				span#price(contenteditable='true') #{item.price}
+			button#save Save
