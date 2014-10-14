@@ -5,13 +5,7 @@ var indexController = require('./controllers/index.js');
 var apiController = require('./controllers/api.js');
 var port = process.env.PORT || 3000;
 
-var allowCrossDomain = function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', 'example.com');
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-
-    next();
-}
+var cors = require('cors')
 
 var app = express();
 app.set('view engine', 'jade');
@@ -19,13 +13,13 @@ app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({secret: 'Ava123!'}))
-app.use(allowCrossDomain);
+app.use(cors());
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://xpo-admin:Ava123!@linus.mongohq.com:10064/xpo-admin');
 
 app.get('/', indexController.index);
-app.post('/api/get', apiController.get);
+app.post('/api/get', cors(), apiController.get);
 app.post('/api/save', apiController.save);
 app.get('/auth', indexController.auth);
 app.post('/auth', indexController.auth);
