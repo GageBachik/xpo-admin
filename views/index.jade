@@ -8,9 +8,9 @@ block content
 	//- 		a(href='#') Add Item
 
 	- each item in items
-		#item 
+		.item 
 			p Name: 
-				span#name #{item.item}
+				span.name #{item.item}
 			p Price: $
-				span#price(contenteditable='true') #{item.price}
-			button#save Save
+				span.price(contenteditable='true') #{item.price}
+			button.save Save

@@ -17,9 +17,9 @@ $(document).on('ready', function() {
 	});
 
 
-	$('#save').on('click', function(e){
-		var item = $(this).parent().find('#name').text()
-		var price = $(this).parent().find('#price').text()
+	$('.save').on('click', function(e){
+		var item = $(this).parent().find('.name').text()
+		var price = $(this).parent().find('.price').text()
 		var data = {item: item, price:price}
 		$.post( "/api/save", data, function( data ) {
 		  if (data === 'success') {

@@ -1,16 +1,16 @@
 h5{
     padding-left: 13px; 
 }
-#item{
+.item{
     line-height: 32px;
     width: 600px;
     text-align: right;
 }
-#item p{
+.item p{
     float: left;
     margin: 0 20px;
     vertical-align: middle;
 }
-#item button{
+.item button{
     vertical-align: middle;
 }
